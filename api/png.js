@@ -1,5 +1,5 @@
-const { resolveAndConnect } = require('./srv'); // Adjust imports
-const { fetchImage } = require('./imageFetcher'); // Assuming fetchImage is placed in a separate file
+const { resolveAndConnect } = require('./srv');
+const { fetchImage } = require('./imageFetcher');
 
 export default async function handler(req, res) {
   const serverip = req.query.serverip;
