@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/api/status/(.*)", "dest": "/api/status.js" },
+    { "src": "/api/status/bedrock/(.*)", "dest": "/api/bedrock-status.js" },
+    { "src": "/api/png/(.*)", "dest": "/api/png.js" },
+    { "src": "/", "dest": "/public/index.html" },
+    { "src": "/api/docs", "dest": "/public/api-docs.html" }
+  ]
+}
