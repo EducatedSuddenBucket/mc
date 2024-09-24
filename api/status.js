@@ -1,6 +1,4 @@
-const net = require('net');
-const dns = require('dns');
-const { resolveAndConnect } = require('./srv'); // Adjust to import your helper functions.
+const { resolveAndConnect } = require('./srv'); 
 
 export default async function handler(req, res) {
   const [serverHost, serverPort] = req.query.serverAddress.split(':');
